@@ -9,6 +9,8 @@
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link href="./assets/css/output.css" rel="stylesheet">
+
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -19,11 +21,12 @@
                 <a href="#hero">&#x1F680; Acme Rockets</a>
             </h1>
 
-            <button class="text-3xl sm:hidden focus:outline-none">
-                &#x2630;
+            <button id="hamburguer-button" class="text-3xl md:hidden cursor-pointer relative w-8 h-8">
+                <!-- &#x2630; -->
+                <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-top-3 before:-translate-x-2/4 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:top-3 after:-translate-x-2/4 after:transition-all after:duration-500"></div>
             </button>
 
-            <nav class="hidden sm:block text-xl" aria-label="main navigation">
+            <nav class="hidden md:block text-xl" aria-label="main navigation">
                 <ul class="flex space-x-4">
                     <li>
                         <a href="#rockets" class="p-2 hover:opacity-90">Our Rockets</a>
@@ -35,6 +38,36 @@
                     
                     <li>
                         <a href="#contact" class="p-2 hover:opacity-90">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="mobile-menu" class="absolute bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden">
+            <!-- <button class="text-8xl self-end px-6">
+                &times;
+            </button> -->
+
+            <nav class="min-h-screen py-8" aria-label="mobile">
+                <ul class="flex flex-col items-center">
+                    <li class="w-full text-center py-6 hover:opacity-90">
+                        <a href="#hero">Home</a>
+                    </li>
+
+                    <li class="w-full text-center py-6 hover:opacity-90">
+                        <a href="#rockets">Rockets</a>
+                    </li>
+
+                    <li class="w-full text-center py-6 hover:opacity-90">
+                        <a href="#testimonials">Testimonials</a>
+                    </li>
+
+                    <li class="w-full text-center py-6 hover:opacity-90">
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                    <li class="w-full text-center py-6 hover:opacity-90">
+                        <a href="#footer">Legal</a>
                     </li>
                 </ul>
             </nav>
