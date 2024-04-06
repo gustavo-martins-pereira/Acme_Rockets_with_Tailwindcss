@@ -2,7 +2,12 @@
 module.exports = {
     content: ["./build/**/*.{html,js}"],
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                "tallscreen": { "raw": "(min-aspect-ratio: 1/2)" },
+                "widescreen": { "raw": "(min-aspect-ratio: 3/2)" },
+            }
+        },
     },
     plugins: [],
 }
